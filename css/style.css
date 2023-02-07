@@ -36,6 +36,13 @@ h6{
     padding: 10px 0;
 }
 
+.green-bottom{
+    background-color: lightgreen;
+    height: 2px;
+    width: 30%;
+    margin: 2px auto;
+}
+
 main{
     display: flex;
     height: calc(100vh - 80px);
