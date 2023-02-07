@@ -43,7 +43,7 @@ main .left-side nav{
     background-color: black;
     width: 250px;
     height: 100%;
-    padding-left: 20px;
+    padding: 0 20px;
 }
 
 main .left-side nav .top-link{
@@ -51,9 +51,14 @@ main .left-side nav .top-link{
     background-color: green; */
 }
 
+main .left-side nav .top-link .logo-image{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
 main .left-side nav .top-link .logo-image img{
-    width: 60%;
-    margin-bottom: 20px;
+    width: 70%;
 }
 
 main .left-side nav .top-link .nav-link{
@@ -101,8 +106,7 @@ main .left-side nav .top-link .playlist .add-button{
 
 main .left-side nav .bottom-link .download-app-link{
     display: flex;
-    align-items: center;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 main .left-side nav .bottom-link .download-app-link .download-image img{
@@ -133,18 +137,10 @@ main .left-side nav .bottom-link .user-account .user-text{
     color: white;
     padding-left: 10px;
 }  
-
-
-
-
-
-
-main .left-side nav .bottom-link{
-    /* height: calc(100% / 2);
-    background-color: brown; */
-}
 /* end header with navbar */
 
+
+/* start Main Right-side */
 main .right-side{
     width: 100%;
     height: 100%;
@@ -201,15 +197,89 @@ main .right-side .card-section .row .col{
     padding: 20px 0;
 }
 
+/* End Main Right-side */
+
 
 
 
 /* start bottom navigation bar */
 .navigation-bar-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 100px;
-    background-color: gray;
+    background-color: #282828;
 }
+
+.navigation-bar-bottom .navigation-left-side{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+
+.navigation-bar-bottom .navigation-left-side .listening-image img{
+    width: 50px;
+}
+
+.navigation-bar-bottom .navigation-left-side .listening-text{
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+.navigation-bar-bottom .navigation-left-side .listening-text .author{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.navigation-bar-bottom .navigation-left-side .listening-text .song{
+    color: gray;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.navigation-bar-bottom .navigation-left-side .icon-heart i,
+.navigation-bar-bottom .navigation-left-side .icon-folder i{
+    color: gray;
+    padding-right: 20px;
+}
+
+.navigation-bar-bottom .navigation-center-side .center-side-top .controller{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation-bar-bottom .navigation-center-side .center-side-top .controller i{
+    color: white;
+    font-size: 18px;
+}
+
+.navigation-bar-bottom .navigation-center-side .center-side-top .controller i:nth-child(3){
+    font-size: 30px;
+}
+
+.controller-right{
+    display: flex;
+    align-items: center;
+}
+
+.volume-bar{
+    height: 3px;
+    width: 100px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
 /* end bottom navigation bar */
 
 
