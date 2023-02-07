@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    height: 100vh;
+}
+
+a{
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+h3{
+    color: white;
+}
+
+h6{
+    color: gray;
+    padding: 10px 0;
+}
+
+main{
+    display: flex;
+    height: calc(100vh - 100px);
+}
+/* COMMONS */
+
+
+/* start header with navbar */
+main .left-side nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    width: 250px;
+    height: 100%;
+    padding-left: 20px;
+}
+
+main .left-side nav .top-link{
+    /* height: calc(100% / 2);
+    background-color: green; */
+}
+
+main .left-side nav .top-link .logo-image img{
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+main .left-side nav .top-link .nav-link{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .left-side nav .top-link .nav-link img{
+    width: 40px;
+    padding-right: 10px;
+}
+
+main .left-side nav .top-link .nav-link .nav-link-item{
+    display: flex;
+    align-items: center;
+}
+
+main .left-side nav .top-link .nav-link .text{
+    color: white;
+}
+
+main .left-side nav .top-link .playlist{
+    margin-top: 40px;
+}
+
+main .left-side nav .top-link .playlist strong{
+    color: white;
+}
+
+main .left-side nav .top-link .playlist ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+main .left-side nav .top-link .playlist .add-button{
+    background-color: gray;
+    padding: 4px 10px;
+    color: black;
+    font-size: 30px;
+}
+
+main .left-side nav .bottom-link .download-app-link{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+main .left-side nav .bottom-link .download-app-link .download-image img{
+    width: 20px;
+}
+
+main .left-side nav .bottom-link .download-app-link .download-text{
+    color: gray;
+    padding-left: 10px;  
+} 
+
+main .left-side nav .bottom-link .user-account{
+    display: flex;
+    padding: 14px 0;
+}
+
+main .left-side nav .bottom-link .user-account .user-image img{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+
+main .left-side nav .bottom-link .user-account .user-text{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 10px;
+}  
+
+
+
+
+
+
+main .left-side nav .bottom-link{
+    /* height: calc(100% / 2);
+    background-color: brown; */
+}
+/* end header with navbar */
+
+main .right-side{
+    width: 100%;
+    height: 100%;
+    background-color: #141922;
+    overflow-y: scroll;
+}
+
+main .right-side .right-side-top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #080b12;
+    width: 100%;
+    height: 100px;
+    padding-right: 20px;
+}
+
+main .right-side .right-side-top .upgrade-button button{
+    border: 1px solid gray;
+}
+
+main .right-side .card-section{
+    padding-left: 20px;
+
+}
+
+main .card-section .navigation-link ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 20px 0 40px;
+}
+
+
+main .right-side .card-section .row{
+    margin-bottom: 30px;
+
+    /* test */
+    border: 1px solid red;
+}
+
+main .right-side .card-section .row .card{
+    display: flex;
+    gap: 20px;
+}
+
+main .right-side .card-section .row .col{
+    width: calc(100% / 6 - 20px);
+
+    /* test */
+    border: 1px solid green;
+    height: 200px;
+    padding: 20px 0;
+}
+
+
+
+
+/* start bottom navigation bar */
+.navigation-bar-bottom{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+}
+/* end bottom navigation bar */
+
+
+
+
