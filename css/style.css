@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #a3a3a3;
 }
 
 .container{
@@ -18,6 +17,7 @@ body {
 }
 
 a{
+    position: relative;
     color: #a3a3a3;
     font-weight: bold;
     font-size: 14px;
@@ -43,13 +43,6 @@ h3{
 h6{
     color: #a3a3a3;
     padding: 10px 0;
-}
-
-.green-bottom{
-    background-color: lightgreen;
-    height: 2px;
-    width: 30%;
-    margin: 2px auto;
 }
 
 main{
@@ -145,6 +138,14 @@ main .left-side nav .top-link .playlist .add-button{
     font-size: 18px;
 }
 
+main .left-side nav .top-link .playlist ul a li:hover .add-button{
+    background-color: white;
+}
+
+main .left-side nav .top-link .playlist .add-button i:hover{
+    color: black;
+}
+
 main .left-side nav .bottom-link hr{
     border: 1px solid #6a6a6a;
 }
@@ -191,7 +192,7 @@ main .left-side nav .bottom-link .user-account .user-text{
 
 /* start Main Right-side */
 main .right-side{
-    width: calc(100% - 200px);
+    width: calc(100vw - 200px);
     height: 100%;
     background-color: #141922;
     overflow-y: scroll;
@@ -209,13 +210,14 @@ main .right-side .right-side-top{
 main .right-side .right-side-top .upgrade-button button{
     border: 1px solid white;
     border-radius: 20px;
-    padding: 8px 26px;
+    padding: 12px 28px;
     background-color: black;
     color: white;
     font-size: 10px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.4s ease;
+
 }
 
 main .right-side .right-side-top .upgrade-button button:hover{
@@ -233,6 +235,21 @@ main .card-section .navigation-link ul{
 
 main .card-section .navigation-link ul li{
     font-size: 12px;
+}
+
+main .card-section .navigation-link a::before{
+    content: "";
+    position: absolute;
+    background-color: #81b71a;
+    width: 0;
+    height: 2px;
+    left: 20%;
+    right: 20%;
+    bottom: -6px;
+}
+
+main .card-section .navigation-link a:active:before{
+    width: 60%;
 }
 
 main .right-side .card-section .row{
@@ -284,18 +301,12 @@ main .right-side .card-section .row .col .card-image{
     cursor: pointer;
 }
 
-
-/* end Position absolute hover card */
 .row .card .col .card-image .hover-play{
     display: none;
     font-size: 50px;
 }
 
-.row .card .col .card-image:hover{
-    opacity: 0.6;
-}
-
-.row .card .col .card-image:hover .hover-play{
+.row .card .col .card-image:hover .hover-play {
     display: block;
     position: absolute;
     top: 50%;
@@ -303,6 +314,31 @@ main .right-side .card-section .row .col .card-image{
     transform: translate(-50%, -50%);
     color: white;
 }
+
+.row .card .col .card-image:hover{
+    opacity: 0.6;
+}
+.time-bar-current,
+.volume-bar-current{
+    position: relative;
+}
+
+.circle{
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.time-bar-current:hover .circle,
+.volume-bar-current:hover .circle{
+    display: block;
+}
+/* end Position absolute hover card */
 
 /* End Main Right-side */
 
@@ -400,6 +436,11 @@ main .right-side .card-section .row .col .card-image{
 
 .navigation-bar-bottom .navigation-center-side .center-side-top .controller i:nth-child(3){
     font-size: 28px;
+    transition: 0.4s ease;
+}
+
+.controller i:nth-child(3):hover{
+    transform: scale(1.2);
 }
 
 .navigation-bar-bottom .center-side-bottom {
@@ -423,7 +464,7 @@ main .right-side .card-section .row .col .card-image{
 }
 
 .navigation-bar-bottom .center-side-bottom .time-bar .time-bar-current{
-    width: 20%;
+    width: 30%;
     height: 4px;
     background-color: #a3a3a3;
 }
@@ -466,7 +507,7 @@ main .right-side .card-section .row .col .card-image{
 
 .navigation-bar-bottom .navigation-right-side .controller-right .volume-bar .volume-bar-current{
     height: 4px;
-    width: 25%;
+    width: 40%;
     background-color: #a3a3a3;
     border-radius: 4px;
 }
@@ -475,9 +516,7 @@ main .right-side .card-section .row .col .card-image{
     background-color:  #81b71a;
     cursor: pointer;
 }
-
 /* end bottom navigation bar */
-
 
 /* MEDIA QUERY */
 
@@ -553,7 +592,7 @@ main .right-side .card-section .row .col .card-image{
 }
 
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1600px){
     main .right-side .card-section .row .card{
         gap: 30px;
     }
