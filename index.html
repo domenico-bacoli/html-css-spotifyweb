@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
+    <link rel="icon" href="img/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +25,8 @@
                 <nav>
                     <div class="top-link">
                         <div class="logo-image">
-                            <img src="img/logo.svg" alt="Spotify logo">
+                            <img src="img/logo.svg" class="logo-standard" alt="Spotify logo">
+                            <img src="img/logo-small.svg" class="logo-small" alt="Spotify logo">
                         </div>
 
                         <div class="nav-link">
@@ -52,7 +55,7 @@
                         <div class="playlist">
                             <strong>PLAYLIST</strong>
                             <ul>
-                                <a href="#"><li><span class="add-button">+</span> Crea Playlist</li></a>
+                                <a href="#"><li><span class="add-button"><i class="fa-sharp fa-solid fa-plus"></i></span> Crea Playlist</li></a>
                                 <a href="#"><li>Nome Playlist</li></a>
                                 <a href="#"><li>Nome Playlist</li></a>
                                 <a href="#"><li>Nome Playlist</li></a>
@@ -112,7 +115,7 @@
                         <div class="card">
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/metal_lifting.jpg" alt="metal compilation image">
+                                    <img src="img/metal_lifting.jpg" alt="metal compilation cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Heavy Metal</h5>
@@ -122,7 +125,7 @@
     
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/stranger.jpeg" alt="stranger things image">
+                                    <img src="img/stranger.jpeg" alt="stranger things cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Stranger things, Vol.1 (a Netflix Original Series Soundtrack)</h5>
@@ -146,7 +149,7 @@
     
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/split.jpeg" alt="split image">
+                                    <img src="img/split.jpeg" alt="split cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Split</h5>
@@ -156,7 +159,7 @@
                             
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/cure.jpeg" alt="cure image">
+                                    <img src="img/cure.jpeg" alt="cure cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>A cure for wellness</h5>
@@ -166,7 +169,7 @@
     
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/sinister.jpeg" alt="sinister image">
+                                    <img src="img/sinister.jpeg" alt="sinister cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Sinister</h5>
@@ -183,7 +186,7 @@
                         <div class="card">
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/radar.jpeg" alt="release radar image">
+                                    <img src="img/radar.jpeg" alt="release radar cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Release radar</h5>
@@ -192,7 +195,7 @@
     
                             <div class="col">
                                 <div class="card-image">
-                                    <img src="img/mixdaily.jpeg" alt="mixdaily image">
+                                    <img src="img/mixdaily.jpeg" alt="mixdaily cover">
                                 </div>
                                 <div class="card-details">
                                     <h5>Dayly Mix 1</h5>
@@ -206,20 +209,20 @@
                         <h6>Più ascolti più accurati saranno i suggerimenti</h6>
                         <div class="card">
                             <div class="col">
-                                <div class="card-image">
-                                    <img src="" alt="">
+                                <div class="card-image rounded">
+                                    <img src="img/youg.jpeg" alt="lana del rey cover">
                                 </div>
                                 <div class="card-details">
-    
+                                    <h5>Lana del Rey</h5>
                                 </div>
                             </div>
     
                             <div class="col">
-                                <div class="card-image">
-                                    <img src="" alt="">
+                                <div class="card-image rounded">
+                                    <img src="img/einaudi.jpeg" alt="einaudi cover">
                                 </div>
                                 <div class="card-details">
-                                    
+                                    <h5>Ludovico Einaudi</h5>
                                 </div>
                             </div>
                         </div>
@@ -231,14 +234,16 @@
         <div class="navigation-bar-bottom">
             <div class="navigation-left-side">
                 <div class="listening-image">
-                    <img src="img/sinister.jpeg" alt="listening image">
+                    <img src="img/sinister.jpeg" alt="current song cover">
                 </div>
                 <div class="listening-text">
                     <div class="author">Sinister</div>
                     <div class="song">Brano Nome</div>
                 </div>
-                <div class="icon-heart"><i class="fa-regular fa-heart"></i></div>
-                <div class="icon-folder"><i class="fa-regular fa-folder"></i></div>
+                <div class="navigation-left-side-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
             </div>
 
             <div class="navigation-center-side">
@@ -251,10 +256,17 @@
                         <i class="fa-solid fa-rotate-right"></i>
                     </div>
                 </div>
+
+
                 <div class="center-side-bottom">
-                    <div class="time-passed">0:25</div>
-                    <div class="time-bar"></div>
-                    <div class="time-remaining">4:35</div>
+                    <div class="center-side-bottom-bar">
+                        <div class="time-passed">0:25</div>
+                        <div class="time-bar">
+                            <div class="time-bar-total"></div>
+                            <div class="time-bar-current"></div>
+                        </div>
+                        <div class="time-remaining">4:35</div>
+                    </div>
                 </div>
             </div>
 
@@ -263,7 +275,10 @@
                     <i class="fa-solid fa-table-list"></i>
                     <i class="fa-solid fa-display"></i>
                     <i class="fa-solid fa-volume-high"></i>
-                    <div class="volume-bar"></div>
+                    <div class="volume-bar">
+                        <div class="volume-bar-total"></div>
+                        <div class="volume-bar-current"></div>
+                    </div>
                 </div>
             </div>
         </div>
