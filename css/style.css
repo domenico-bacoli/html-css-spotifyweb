@@ -12,6 +12,7 @@ body {
 .container{
     height: 100vh;
     width: 100vw;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -21,6 +22,14 @@ a{
     font-weight: bold;
     font-size: 14px;
     text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+.fa-solid:hover{
+    color: white;
 }
 
 i{
@@ -93,14 +102,16 @@ main .left-side nav .top-link .nav-link .nav-link-item{
 
 main .left-side nav .top-link .nav-link .text{
     color: #a3a3a3;
-    font-size: 10px;
     font-weight: bold;
 }
 
-main .left-side nav .top-link .nav-link .text.home{
-    color: white;
+main .left-side nav .top-link .nav-link .text a{
+    font-size: 10px;
 }
 
+main .left-side nav .top-link .nav-link .text.home a{
+    color: white;
+}
 
 main .left-side nav .top-link .playlist{
     margin-top: 20px;
@@ -146,11 +157,14 @@ main .left-side nav .bottom-link .download-app-link .download-image img{
     width: 20px;
 }
 
-main .left-side nav .bottom-link .download-app-link .download-text{
+main .left-side nav .bottom-link .download-app-link .download-text {
     color: #a3a3a3;
     padding-left: 10px;  
-    font-size: 10px;
 } 
+
+main .left-side nav .bottom-link .download-app-link .download-text a{
+    font-size: 10px;
+}
 
 main .left-side nav .bottom-link .user-account{
     display: flex;
@@ -200,6 +214,12 @@ main .right-side .right-side-top .upgrade-button button{
     color: white;
     font-size: 10px;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main .right-side .right-side-top .upgrade-button button:hover{
+    transform: scale(1.15);
 }
 
 main .card-section .navigation-link ul{
@@ -230,11 +250,11 @@ main .right-side .card-section .row{
 main .right-side .card-section .row .card{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
 }
 
 main .right-side .card-section .row .col{
-    width: calc(100% / 6 - ( 20px / 6 * 5));
+    width: calc(100% / 6 - ( 16px / 6 * 5));
 }
 
 main .right-side .card-section .row .col .card-image img{
@@ -257,6 +277,31 @@ main .right-side .card-section .row .col .card-details h6{
 
 main .right-side .card-section .row .col .card-image.rounded img{
     border-radius: 50%;
+}
+/* start Position absolute hover card */
+main .right-side .card-section .row .col .card-image{
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* end Position absolute hover card */
+.row .card .col .card-image .hover-play{
+    display: none;
+    font-size: 50px;
+}
+
+.row .card .col .card-image:hover{
+    opacity: 0.6;
+}
+
+.row .card .col .card-image:hover .hover-play{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 /* End Main Right-side */
@@ -307,6 +352,11 @@ main .right-side .card-section .row .col .card-image.rounded img{
     font-size: 10px;
 }
 
+.navigation-bar-bottom .navigation-left-side .listening-text .song:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .navigation-bar-bottom .navigation-left-side .navigation-left-side-icon{
     display: inline-block;
 }
@@ -315,10 +365,13 @@ main .right-side .card-section .row .col .card-image.rounded img{
     color: #a3a3a3;
 }
 
+.navigation-bar-bottom .navigation-left-side .navigation-left-side-icon i:hover{
+    color: white;
+}
+
 .navigation-bar-bottom .navigation-left-side .navigation-left-side-icon i:first-child{
     padding-right: 10px;
 }
-
 
 .navigation-bar-bottom .navigation-center-side{
     display: flex;
@@ -375,13 +428,16 @@ main .right-side .card-section .row .col .card-image.rounded img{
     background-color: #a3a3a3;
 }
 
+.navigation-bar-bottom .center-side-bottom .time-bar .time-bar-current:hover{
+    background-color: #81b71a;
+    cursor: pointer;
+}
 
 .navigation-bar-bottom .center-side-bottom .time-passed,
 .navigation-bar-bottom .center-side-bottom .time-remaining{
     color: white;
     font-weight: bold;
     font-size: 10px;
-
 }
 
 .navigation-bar-bottom .navigation-right-side{
@@ -393,7 +449,7 @@ main .right-side .card-section .row .col .card-image.rounded img{
 .navigation-bar-bottom .navigation-right-side .controller-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .navigation-bar-bottom .navigation-right-side .controller-right i {
@@ -415,9 +471,12 @@ main .right-side .card-section .row .col .card-image.rounded img{
     border-radius: 4px;
 }
 
+.navigation-bar-bottom .navigation-right-side .controller-right .volume-bar .volume-bar-current:hover{
+    background-color:  #81b71a;
+    cursor: pointer;
+}
+
 /* end bottom navigation bar */
-
-
 
 
 /* MEDIA QUERY */
@@ -473,7 +532,7 @@ main .right-side .card-section .row .col .card-image.rounded img{
     }
 
     main .right-side .card-section .row .col{
-        width: calc(100% / 2 - 20px);
+        width: calc(100% / 2 - 16px);
     }
 }
 
@@ -481,7 +540,7 @@ main .right-side .card-section .row .col .card-image.rounded img{
 @media screen and (min-width: 568px) and (max-width: 767px){
     
     main .right-side .card-section .row .col{
-        width: calc(100% / 2 - ( 20px / 2 ));
+        width: calc(100% / 2 - ( 16px / 2 ));
     }
 }
 
@@ -489,7 +548,17 @@ main .right-side .card-section .row .col .card-image.rounded img{
 @media screen and (min-width: 768px) and (max-width: 991px){
 
     main .right-side .card-section .row .col{
-        width: calc(100% / 4 - ( 20px / 4 * 3));
+        width: calc(100% / 4 - ( 16px / 4 * 3));
     }
 }
 
+
+@media screen and (min-width: 1400px){
+    main .right-side .card-section .row .card{
+        gap: 30px;
+    }
+
+    main .right-side .card-section .row .col{
+        width: calc(100% / 6 - ( 30px / 6 * 5));
+    }
+}
