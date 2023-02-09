@@ -420,7 +420,7 @@ main .right-side .card-section .row .col .card-image:hover img{
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     padding: 0 6px;
 }
@@ -451,7 +451,7 @@ main .right-side .card-section .row .col .card-image:hover img{
 .navigation-bar-bottom .center-side-bottom {
     display: flex;
     width: 100%;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
 }
 
 .navigation-bar-bottom .center-side-bottom .center-side-bottom-bar{
@@ -624,6 +624,10 @@ main .right-side .card-section .row .col .card-image:hover img{
 
     main .right-side .card-section .row .col{
         width: calc(100% / 4 - ( 16px / 4 * 3));
+    }
+
+    .navigation-bar-bottom .navigation-center-side{
+        max-width: 400px;
     }
 }
 
