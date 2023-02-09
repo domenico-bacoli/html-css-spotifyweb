@@ -13,6 +13,11 @@ body {
     width: 100vw;
 }
 
+main{
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
 a{
     position: relative;
     color: #999999;
@@ -21,11 +26,9 @@ a{
     text-decoration: none;
 }
 
-a:hover{
-    color: white;
-}
-
-.fa-solid:hover{
+a:hover,
+.fa-solid:hover,
+h3{
     color: white;
 }
 
@@ -33,19 +36,11 @@ i{
     cursor: pointer;
 }
 
-h3{
-    color: white;
-}
-
 h6{
     color: #999999;
     padding: 10px 0;
 }
 
-main{
-    display: flex;
-    height: calc(100vh - 90px);
-}
 /* COMMONS */
 
 
@@ -159,7 +154,6 @@ main .left-side nav .bottom-link hr{
 }
 main .left-side nav .bottom-link .download-app-link{
     display: flex;
-    align-items: center;
 }
 
 main .left-side nav .bottom-link .download-app-link .download-image img{
@@ -264,11 +258,7 @@ main .card-section .navigation-link a.active::before{
 }
 
 main .right-side .card-section .row{
-    margin-bottom: 14px;
-}
-
-main .right-side .card-section .row h3{
-    font-size: 16px;
+    margin-bottom: 24px;
 }
 
 main .right-side .card-section .row{
@@ -356,7 +346,6 @@ main .right-side .card-section .row .col .card-image:hover img{
     display: block;
 }
 /* end position absolute hover navigation bottom timeline */
-
 
 /* End Main Right-side */
 
@@ -534,6 +523,7 @@ main .right-side .card-section .row .col .card-image:hover img{
     cursor: pointer;
 }
 /* end bottom navigation bar */
+
 
 /* MEDIA QUERY */
 
