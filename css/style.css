@@ -551,9 +551,9 @@ main .right-side .card-section .row .col .card-image:hover img{
     }
 
     main .left-side nav .top-link .nav-link .nav-link-item:first-child:before{
-    left: -12px;
+        left: -12px;
 
-}
+    }
 
     main .left-side nav .top-link .nav-link img{
         padding: 0;
@@ -586,14 +586,12 @@ main .right-side .card-section .row .col .card-image:hover img{
         width: calc(100% - 50px);
     }
 
-
-
     main .right-side .card-section .row .col{
-        width: calc(100% / 2 - 16px);
+        width: calc(100% / 2 - ( 16px / 2 ));
     }
 
     .navigation-bar-bottom .navigation-left-side{
-        gap: 6px;
+        gap: 14px;
     }
 
     .navigation-bar-bottom .navigation-center-side .center-side-top .controller{
