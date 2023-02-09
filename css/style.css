@@ -11,9 +11,6 @@ body {
 .container{
     height: 100vh;
     width: 100vw;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 a{
@@ -309,6 +306,7 @@ main .right-side .card-section .row .col .card-details h6{
 main .right-side .card-section .row .col .card-image.rounded img{
     border-radius: 50%;
 }
+
 /* start Position absolute hover card */
 main .right-side .card-section .row .col .card-image{
     position: relative;
@@ -329,9 +327,13 @@ main .right-side .card-section .row .col .card-image{
     color: white;
 }
 
-.row .card .col .card-image:hover{
-    opacity: 0.6;
+main .right-side .card-section .row .col .card-image:hover img{
+    opacity: 0.6;    
 }
+
+/* end Position absolute hover card */
+
+/* start position absolute hover navigation bottom timeline */
 .time-bar-current,
 .volume-bar-current{
     position: relative;
@@ -353,7 +355,8 @@ main .right-side .card-section .row .col .card-image{
 .volume-bar-current:hover .circle{
     display: block;
 }
-/* end Position absolute hover card */
+/* end position absolute hover navigation bottom timeline */
+
 
 /* End Main Right-side */
 
